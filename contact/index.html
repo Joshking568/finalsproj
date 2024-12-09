@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e7eaf3;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            text-align: left;
+            position: relative;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: #9370DB; /* Light purple color */
+            cursor: pointer;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                border-top: 1px solid #444;
+            }
+            nav ul li {
+                display: block;
+                text-align: left;
+                padding: 10px;
+            }
+            nav ul.active {
+                display: flex;
+            }
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        a {
+            color: #3333cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../services/index.html">Services</a></li>
+            <li><a href="../bookings/index.html">Booking</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Contact us today to book an appointment!</h1>
+    <p>(706) 555-7845</p>
+    <p>Email us at <a href="mailto:contact@polipaws.net">contact@polipaws.net</a></p>
+    <p>We are located at:</p>
+    <p>146 Dog Tails, Columbus, GA 31907</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53843.99870740336!2d-84.9313792!3d32.4927488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1733711329297!5m2!1sen!2sus" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</body>
+</html>
